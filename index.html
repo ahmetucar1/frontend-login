@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Giriş Yap</button>
+                <button type="button" class="toggle-btn" onclick="register()">Kayıt Ol</button>
+                <button type="button" class="toggle-btn" onclick="forgotpassword()">Şifre Yenile</button>
+            </div>
+            
+            <form id="Register" class="input-group">
+                <input type="text" class="input-field" placeholder="Kullanıcı Adı Girin" required>
+                <input type="password" class="input-field" placeholder="Şifrenizi Girin" required>
+                <input type="email" class="input-field" placeholder="Mailiniz Girin" required>
+                <button type="submit" class="submit-btn">Kayıt Ol</button>
+            </form>  
+
+            <form action="filmlistem.html" id="Login"  class="input-group">
+                <input type="text" class="input-field" placeholder="Kullanıcı Adı Girin" required>
+                <input type="password" class="input-field" placeholder="Şifrenizi Girin" required>
+                <button  type="submit" class="submit-btn">Giriş</button>
+                
+                </form>
+            
+            <form id="forgotpassword" class="input-group">
+                <input type="email" class="input-field" placeholder="Mailiniz Girin" required>
+                <button type="submit" class="submit-btn">Doğrulama Kodu Gönder</button>
+            </form> 
+        </div>
+    </div>
+
+    <script>
+        var x = document.getElementById("Login");
+        var z = document.getElementById("Register");
+        var y = document.getElementById("btn");
+        var e = document.getElementById("forgotpassword")
+
+        function register () {
+            x.style.left = "-400px";
+            z.style.left = "50px";
+            y.style.left = "110px";
+            e.style.left = "400px"
+        }
+        function login () {
+            x.style.left = "50px";
+            z.style.left = "450px";
+            y.style.left = "0px";
+            e.style.left = "400px"
+        }
+        function forgotpassword () {
+            x.style.left = "-400px";
+            z.style.left = "-400px";
+            y.style.left = "257px";
+            e.style.left = "0px"
+        }
+    </script>
+
+</body>
+</html>
